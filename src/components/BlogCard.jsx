@@ -19,7 +19,7 @@ export default function BlogCard() {
 
     const handleFavored = () => {
         
-         setFavored(!favored );
+         setFavored((prev) => !prev);
     };
     const style = {
         color: "red",
