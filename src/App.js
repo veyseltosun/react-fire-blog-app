@@ -1,11 +1,12 @@
 import './App.css';
+import BlogCard from './components/BlogCard';
 import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>     
-     <h2>App</h2>
+      <BlogCard/>
     </div>
   );
 }
