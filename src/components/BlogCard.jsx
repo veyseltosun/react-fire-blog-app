@@ -43,7 +43,7 @@ export default function BlogCard({setFavored, favored}) {
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites" onClick={handleFavored}>
+                <IconButton aria-label="add to favorites" onClick={() => handleFavored()}>
                     <FavoriteIcon
                         sx={
 
