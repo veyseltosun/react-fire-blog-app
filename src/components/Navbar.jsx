@@ -13,9 +13,11 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import Logo from "../assets/cw.jpeg"
 
+
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -39,6 +41,7 @@ export default function MenuAppBar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+           
           >
             <img
               src={Logo}
