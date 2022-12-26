@@ -12,12 +12,25 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import Logo from "../assets/cw.jpeg"
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
+
 
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [click, setClick] = React.useState(true)
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+   
+    setClick((prev) => !prev );
+    if (click){
+        navigate("/about")
+    }else{
+        navigate("/")
+    }
+  }
   
 
   const handleChange = (event) => {
@@ -42,7 +55,7 @@ export default function MenuAppBar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick={<Link to={"/"}/>}
+            onClick={handleNavigate}
           >
             <img
               src={Logo}
