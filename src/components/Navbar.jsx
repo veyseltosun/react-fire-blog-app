@@ -12,6 +12,7 @@ import FormGroup from "@mui/material/FormGroup";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import Logo from "../assets/cw.jpeg"
+import { Link } from "react-router-dom";
 
 
 export default function MenuAppBar() {
@@ -41,7 +42,7 @@ export default function MenuAppBar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-           
+            onClick={<Link to={"/"}/>}
           >
             <img
               src={Logo}
