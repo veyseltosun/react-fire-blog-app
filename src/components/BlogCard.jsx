@@ -5,65 +5,57 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
 
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-
-
-
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
 
 
 export default function BlogCard() {
-    const [expanded, setExpanded] = React.useState(false);
+    const [favored, setFavored] = React.useState(false);
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
+    const handleFavored = () => {
+        
+         setFavored(!favored );
     };
+    const style = {
+        color: "red",
+    }
+    const style2 = {
+        color: "blue"
+    }
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, margin:10, backgroundColor:"rgba(75, 75, 75, .3)"}}>
+            <img width="300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"/>
             <CardHeader
-                title="Shrimp and Chorizo Paella"
+                title={
+                    "JavaScript"}
                 subheader="September 14, 2016"
-                sx={{ color: blue[800], fontSize: "35", fontWeight: "medium" }}
+                sx={{ color: blue[800], fontSize: "60px", fontWeight: "medium" }}
             />
-            <CardMedia
-                component="img"
-                height="194"
-                image="/static/images/cards/paella.jpg"
-                alt="Paella dish"
-            />
+           
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    This impressive paella is a perfect party dish and a fun meal to cook
-                    together with your guests. Add 1 cup of frozen peas along with the
-                    mussels, if you like.
+                    {"JavaScript [10] (genellikle JS olarak kısaltılır), HTML ve CSS ile birlikte World Wide Web'in temel teknolojilerinden biri olan programlama dilidir ..."}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
+                <IconButton aria-label="add to favorites" onClick={handleFavored}>
+                    <FavoriteIcon 
+                    sx={
+
+                        favored?  style: style2
+                    }/>
                 </IconButton>
                 <IconButton aria-label="comment">
                     <ChatBubbleOutlineIcon />
                 </IconButton>
-
-
             </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
-                    <Typography paragraph>Method:</Typography>
-                    <Typography paragraph>
-                        Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-                        set aside for 10 minutes.
-                    </Typography>
-                </CardContent>
-            </Collapse>
+            
         </Card>
     );
 }

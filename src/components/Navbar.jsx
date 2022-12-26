@@ -34,7 +34,7 @@ export default function MenuAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fix">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             size="large"
