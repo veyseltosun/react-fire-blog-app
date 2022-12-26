@@ -14,7 +14,7 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
 
 
-export default function BlogCard({setFavored, favored }) {
+export default function BlogCard({setFavored, favored, handleFavored }) {
   
     // const handleFavored = (e) =>{
     //     e.preventDefault()
@@ -44,7 +44,7 @@ export default function BlogCard({setFavored, favored }) {
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites" onClick={() => setFavored(!favored)}>
+                <IconButton aria-label="add to favorites" onClick={(id) => handleFavored(id)}>
                     <FavoriteIcon
                         sx={
 
