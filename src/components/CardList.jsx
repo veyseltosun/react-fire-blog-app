@@ -2,6 +2,7 @@
 import BlogCard from './BlogCard';
 
 const CardList = ({dumyData, favored, setFavored }) => {
+    console.log("list " , favored)
     return (
 
 
@@ -9,7 +10,7 @@ const CardList = ({dumyData, favored, setFavored }) => {
             {
                 dumyData.map((card, index) => {
                     return (
-                        <BlogCard key={card.index}  fovered={favored} setFavored={setFavored} />
+                        <BlogCard key={index}  fovered={favored} setFavored={setFavored} />
                     )
                 })
 

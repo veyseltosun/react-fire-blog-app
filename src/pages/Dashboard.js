@@ -10,7 +10,7 @@ const Dashboard = () => {
 
 //     setFavored((prev) => !prev);
 // };
-
+console.log(favored)
    
   return (
     <div style={{display: "flex", flexDirection:"row" }}>
