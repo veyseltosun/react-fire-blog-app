@@ -6,7 +6,7 @@ const CardList = ({dumyData, favored, setFavored, handleFavored }) => {
     return (
 
 
-        <div  style={{display: "flex", flexDirection:"column" }} >
+        <div  style={{display: "flex", flexDirection:"row" }} >
             {
                 dumyData.map((card, index) => {
                     return (
